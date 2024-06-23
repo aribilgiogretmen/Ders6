@@ -1,0 +1,32 @@
+﻿@model RandomPasswordGenerator
+
+
+<div class="container">
+
+
+    <h2>Random Şifre Oluşturma Ekranı</h2>
+    <p>Random oluştur ve txt dosyasına kaydet</p>
+
+    <form asp-action="Generate" method="post" class="mt-5">
+
+        <button type="submit" class="btn btn-primary">Random Şifre Oluştur</button>
+
+
+    </form>
+
+
+    @if(Model!=null)
+    {
+        <div class="mt-3">
+
+            <h2>Random Şifre: <span class="text-success">@Model.Password</span></h2>
+            <h2>Hash Şifre: <span class="text-info">@Model.HashedPassword</span></h2>
+            <h2>Oluşturma Tarihi : <span class="text-primary">@Model.GenerateDate</span></h2>
+
+
+        </div>
+        
+    }
+
+
+</>
